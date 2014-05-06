@@ -4,6 +4,7 @@
 .idea/uiDesigner.xml
 ant_build/
 bin/
+build/
 gen/
 out/
 tmp/
