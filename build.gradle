@@ -2,26 +2,12 @@ buildscript {
     repositories {
         mavenCentral()
     }
+
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:0.14.2+'
     }
 }
 
-apply plugin: 'com.android.library'
-
-dependencies {
-    compile 'com.android.support:support-v4:21.0.3'
-}
-
-android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
-
-    sourceSets {
-        main {
-            manifest.srcFile 'mopub-sdk/AndroidManifest.xml'
-            java.srcDirs = ['mopub-sdk/src/main/java']
-            res.srcDirs = ['mopub-sdk/res']
-        }
-    }
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
 }
