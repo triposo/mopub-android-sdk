@@ -1,5 +1,18 @@
 // This buildscript will assemble the MoPub SDK into an AAR.
 
+// Copied from ../build.gradle, make sure they are in sync.
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.3'
+        classpath 'org.robolectric:robolectric-gradle-plugin:1.1.0'
+    }
+}
+
 repositories {
     jcenter()
 }
